@@ -1,11 +1,9 @@
-import factory.Filter
-import factory.FilterChooser
-import factory.FilterType
-import factory.Instagram
+import command.RemoteControl
+import command.TVOnCommand
 
 fun main(args: Array<String>) {
-    val chooser: FilterChooser = Instagram()
-    val filter: Filter = chooser.createFilter(FilterType.OLD)
+    val remote = RemoteControl()
 
-    println(filter.applyFilter())
+    remote.setCommand(TVOnCommand)
+    remote.buttonWasPressed()
 }
