@@ -1,9 +1,15 @@
 import command.RemoteControl
 import command.TVOnCommand
+import state.MusicPlayer
+import state.PlayingState
+import state.StopState
 
 fun main(args: Array<String>) {
-    val remote = RemoteControl()
+    val musicPlayer = MusicPlayer
 
-    remote.setCommand(TVOnCommand)
-    remote.buttonWasPressed()
+    musicPlayer.pressedPauseButton()
+    musicPlayer.pressedPlayButton()
+    musicPlayer.pressedPlayButton()
+    musicPlayer.pressedStopButton()
+    musicPlayer.pressedPauseButton()
 }
